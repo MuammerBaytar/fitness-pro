@@ -1,0 +1,66 @@
+:root {
+  /* Premium Dark Theme Palette */
+  --bg-color: #121212;
+  --card-bg: #1e1e1e;
+  --card-bg-hover: #292929;
+  --text-primary: #ffffff;
+  --text-secondary: #b3b3b3;
+  --accent-color: #00e5ff; /* Cyan Neon */
+  --accent-glow: rgba(0, 229, 255, 0.4);
+  --success-color: #00ff9d;
+  --danger-color: #ff3d3d;
+  
+  /* Glassmorphism */
+  --glass-bg: rgba(30, 30, 30, 0.7);
+  --glass-border: 1px solid rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(12px);
+
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  /* Font */
+  --font-main: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+}
+
+/* Utility Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}

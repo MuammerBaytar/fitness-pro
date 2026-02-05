@@ -1,0 +1,276 @@
+/* Component Styles appended to index.css logic */
+
+/* Layout */
+.app-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+header h1 {
+  background: linear-gradient(135deg, #fff 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--spacing-xs);
+}
+
+.subtitle {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Weekly Schedule */
+.days-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.day-card {
+  background: var(--card-bg);
+  border: 1px solid transparent;
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.day-card:hover {
+  background: var(--card-bg-hover);
+  transform: translateY(-2px);
+}
+
+.day-card.selected {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+.day-card.today::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6px;
+  height: 6px;
+  background: var(--success-color);
+  border-radius: 50%;
+  margin: 8px;
+}
+
+.day-name {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.day-focus {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  line-height: 1.2;
+}
+
+.rest-day .day-name {
+  color: var(--text-secondary);
+}
+
+/* Active Workout View */
+.daily-view {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.section-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: var(--spacing-sm);
+}
+
+.back-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Exercise Card */
+.exercise-card {
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  border: var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-sm);
+}
+
+.card-header h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  flex: 1;
+  padding-right: 8px;
+}
+
+.badges {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.badge {
+  font-size: 0.75rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.badge.sets {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.badge.reps {
+  background: rgba(0, 229, 255, 0.15);
+  color: var(--accent-color);
+}
+
+.card-meta {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.icon {
+  color: var(--accent-color);
+  font-size: 0.9rem;
+}
+
+.icon-sm {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+
+.icon-xs {
+  font-size: 0.7rem;
+}
+
+.card-note {
+  display: flex;
+  gap: 8px;
+  /* Slightly more gap for alignment */
+  align-items: flex-start;
+  margin-bottom: var(--spacing-md);
+  padding: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #ddd;
+}
+
+/* Logging Section */
+.log-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: var(--spacing-sm);
+}
+
+.last-log {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.log-form {
+  display: flex;
+  gap: 8px;
+}
+
+.input-group {
+  position: relative;
+  flex: 1;
+}
+
+.log-input {
+  width: 100%;
+  background: #111;
+  border: 1px solid #333;
+  color: white;
+  padding: 8px 30px 8px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.log-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.unit {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  font-size: 0.75rem;
+  pointer-events: none;
+}
+
+.log-btn {
+  background: var(--card-bg-hover);
+  color: white;
+  border: 1px solid #444;
+  padding: 0 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.log-btn:hover {
+  background: #333;
+  border-color: var(--text-secondary);
+}
+
+.log-btn.success {
+  background: var(--success-color);
+  /* Green background on success */
+  color: #000;
+  border-color: var(--success-color);
+}
