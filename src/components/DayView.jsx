@@ -7,7 +7,7 @@ import { workoutSchedule } from "../data/workoutData";
 const DayView = ({ dayId, onBack, onLogExercise, logs }) => {
     const dayData = workoutSchedule[dayId];
 
-    if (!dayData) return <div>Invalid Day</div>;
+    if (!dayData) return <div>Gün Bulunamadı</div>;
 
     const isRestDay = dayData.restDay;
 
@@ -15,7 +15,7 @@ const DayView = ({ dayId, onBack, onLogExercise, logs }) => {
         <div className="daily-view fade-in">
             <div className="section-title">
                 <button onClick={onBack} className="back-btn">
-                    <FaArrowLeft /> Back to Schedule
+                    <FaArrowLeft /> Program
                 </button>
                 <span className="subtitle">{dayData.dayName}</span>
             </div>
@@ -23,6 +23,18 @@ const DayView = ({ dayId, onBack, onLogExercise, logs }) => {
             <header>
                 <h1>{dayData.focus}</h1>
             </header>
+
+            {/* Supplement Guide Overlay */}
+            {dayData.supplements && dayData.supplements.length > 0 && (
+                <div className="supplement-card">
+                    <h4>Supplement Rehberi</h4>
+                    <ul>
+                        {dayData.supplements.map((item, idx) => (
+                            <li key={idx}>{item}</li>
+                        ))}
+                    </ul>
+                </div>
+            )}
 
             {isRestDay ? (
                 <div className="rest-day-message" style={{ textAlign: "center", padding: "40px", color: "#666" }}>

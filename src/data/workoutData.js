@@ -2,8 +2,14 @@ export const workoutSchedule = {
     Monday: {
         id: "monday",
         dayName: "Pazartesi",
-        focus: "Upper Body (Power/Strength)",
+        focus: "Üst Vücut (Güç)",
         restDay: false,
+        estCalories: "350-450",
+        supplements: [
+            "Spor Öncesi: 5g Kreatin (Bol su ile)",
+            "Spor Sonrası: 1 Ölçek Gainer + Protein",
+            "Günlük Su Hedefi: 3.5 - 4 Litre"
+        ],
         exercises: [
             {
                 id: "mon_1",
@@ -34,7 +40,7 @@ export const workoutSchedule = {
             },
             {
                 id: "mon_4",
-                name: "Weighted Pull-Up (Barfiks)",
+                name: "Weighted Pull-Up",
                 sets: "3",
                 reps: "6-10",
                 rpe: "9",
@@ -43,7 +49,7 @@ export const workoutSchedule = {
             },
             {
                 id: "mon_5",
-                name: "Lateral Raise (Yana Açış)",
+                name: "Lateral Raise",
                 sets: "3-4",
                 reps: "12-15",
                 rpe: "9-10 (Tükeniş)",
@@ -52,7 +58,7 @@ export const workoutSchedule = {
             },
             {
                 id: "mon_6",
-                name: "Skullcrushers (Triceps)",
+                name: "Skullcrushers",
                 sets: "3",
                 reps: "10-12",
                 rpe: "9",
@@ -61,7 +67,7 @@ export const workoutSchedule = {
             },
             {
                 id: "mon_7",
-                name: "Barbell Curl (Biceps)",
+                name: "Barbell Curl",
                 sets: "3",
                 reps: "8-12",
                 rpe: "9",
@@ -73,8 +79,14 @@ export const workoutSchedule = {
     Tuesday: {
         id: "tuesday",
         dayName: "Salı",
-        focus: "Lower A (Quad & Squat)",
+        focus: "Alt Vücut A (Quad & Squat)",
         restDay: false,
+        estCalories: "500-600",
+        supplements: [
+            "Spor Öncesi: 5g Kreatin (Bol su ile)",
+            "Spor Sonrası: 1 Ölçek Gainer + Protein",
+            "Günlük Su Hedefi: 4 Litre (Bacak günü önemlidir)"
+        ],
         exercises: [
             {
                 id: "tue_1",
@@ -123,7 +135,7 @@ export const workoutSchedule = {
             },
             {
                 id: "tue_6",
-                name: "Hanging Leg Raise (Karın)",
+                name: "Hanging Leg Raise",
                 sets: "3",
                 reps: "10-15",
                 rpe: "8-9",
@@ -135,15 +147,27 @@ export const workoutSchedule = {
     Wednesday: {
         id: "wednesday",
         dayName: "Çarşamba",
-        focus: "Rest / Active Recovery",
+        focus: "Dinlenme / Aktif Toparlanma",
         restDay: true,
+        estCalories: "100-200 (Yürüyüş vs.)",
+        supplements: [
+            "Gün içinde: 5g Kreatin",
+            "İhtiyaç halinde Gainer (Ara öğün)",
+            "Günlük Su Hedefi: 3 - 3.5 Litre"
+        ],
         exercises: [],
     },
     Thursday: {
         id: "thursday",
         dayName: "Perşembe",
-        focus: "Upper Body (Hypertrophy)",
+        focus: "Üst Vücut (Hipertrofi)",
         restDay: false,
+        estCalories: "350-450",
+        supplements: [
+            "Spor Öncesi: 5g Kreatin (Bol su ile)",
+            "Spor Sonrası: 1 Ölçek Gainer + Protein",
+            "Günlük Su Hedefi: 3.5 - 4 Litre"
+        ],
         exercises: [
             {
                 id: "thu_1",
@@ -156,7 +180,7 @@ export const workoutSchedule = {
             },
             {
                 id: "thu_2",
-                name: "Lat Pulldown (Geniş Tutuş)",
+                name: "Lat Pulldown (Wide)",
                 sets: "3-4",
                 reps: "10-12",
                 rpe: "9",
@@ -165,7 +189,7 @@ export const workoutSchedule = {
             },
             {
                 id: "thu_3",
-                name: "Chest Fly (Kablo veya Makine)",
+                name: "Chest Fly (Cable/Machine)",
                 sets: "3",
                 reps: "12-15",
                 rpe: "10 (Tükeniş)",
@@ -201,7 +225,7 @@ export const workoutSchedule = {
             },
             {
                 id: "thu_7",
-                name: "Tricep Pushdown (Kablo)",
+                name: "Tricep Pushdown (Cable)",
                 sets: "3",
                 reps: "12-15",
                 rpe: "10 (Tükeniş)",
@@ -213,8 +237,14 @@ export const workoutSchedule = {
     Friday: {
         id: "friday",
         dayName: "Cuma",
-        focus: "Lower Body (Posterior Chain & Strength)",
+        focus: "Alt Vücut (Arka Zincir & Güç)",
         restDay: false,
+        estCalories: "500-650",
+        supplements: [
+            "Spor Öncesi: 5g Kreatin (Bol su ile)",
+            "Spor Sonrası: 1 Ölçek Gainer + Protein",
+            "Günlük Su Hedefi: 4 Litre"
+        ],
         exercises: [
             {
                 id: "fri_1",
@@ -236,7 +266,7 @@ export const workoutSchedule = {
             },
             {
                 id: "fri_3",
-                name: "Leg Curl (Makine)",
+                name: "Leg Curl (Machine)",
                 sets: "3-4",
                 reps: "10-15",
                 rpe: "10 (Tükeniş)",
@@ -245,7 +275,7 @@ export const workoutSchedule = {
             },
             {
                 id: "fri_4",
-                name: "Goblet Squat veya Hack Squat",
+                name: "Goblet Squat / Hack Squat",
                 sets: "3",
                 reps: "10-12",
                 rpe: "9",
@@ -263,7 +293,7 @@ export const workoutSchedule = {
             },
             {
                 id: "fri_6",
-                name: "Cable Crunch (Karın)",
+                name: "Cable Crunch",
                 sets: "3",
                 reps: "12-15",
                 rpe: "9",
@@ -275,15 +305,27 @@ export const workoutSchedule = {
     Saturday: {
         id: "saturday",
         dayName: "Cumartesi",
-        focus: "Rest / Active Recovery",
+        focus: "Dinlenme / Aktif Toparlanma",
         restDay: true,
+        estCalories: "100-200",
+        supplements: [
+            "Gün içinde: 5g Kreatin",
+            "İhtiyaç halinde Gainer",
+            "Günlük Su Hedefi: 3 - 3.5 Litre"
+        ],
         exercises: [],
     },
     Sunday: {
         id: "sunday",
         dayName: "Pazar",
-        focus: "Rest / Active Recovery",
+        focus: "Dinlenme / Aktif Toparlanma",
         restDay: true,
+        estCalories: "100-200",
+        supplements: [
+            "Gün içinde: 5g Kreatin",
+            "İhtiyaç halinde Gainer",
+            "Günlük Su Hedefi: 3 - 3.5 Litre"
+        ],
         exercises: [],
     },
 };
